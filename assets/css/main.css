@@ -29,8 +29,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-body {
-	line-height: 1;
+body, html {
+	/*line-height: 1;*/
+	height: 100%;
+	margin: 0;
 }
 
 ol, ul {
@@ -2052,6 +2054,44 @@ input, select, textarea {
 	input[type="submit"],
 	input[type="reset"],
 	button,
+
+	.button-cta1 {
+		padding: 0.80rem 3em 0.80rem 3em;
+		margin-right: 1rem;
+		position: relative;
+		display: inline-block;
+		background: #df7366;
+		color: #fff;
+		text-align: center;
+		border-radius: 0.5em;
+		text-decoration: none;
+		border: 0;
+		cursor: pointer;
+		outline: 0;
+		font-size: 16px;
+		-moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		-webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		-ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+	}
+	.button-scroll {
+		border-radius: 100%;
+		width: 4.5em;
+		height: 4.5em;
+		line-height: 4.5em;
+		padding: 0;
+		/*margin: 2.5em 0 0 0;*/
+		background-color: transparent;
+
+	}
+	.button-scroll_a {
+		display: flex;
+		justify-content: center;
+		border-radius: 100%;
+		width: 4.5em;
+		height: 4.5em;
+	}
+
 	.button {
 		position: relative;
 		display: inline-block;
@@ -2070,6 +2110,10 @@ input, select, textarea {
 		-ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 		transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 	}
+
+.container-cta {
+	margin: 15px 0 15px 0;
+}
 
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
@@ -2174,16 +2218,43 @@ input, select, textarea {
 
 /* Header */
 
+/*.background {*/
+/*	max-width: 100%;*/
+/*	height: auto;*/
+/*	background-size: cover;*/
+/*	background-position: center center;*/
+
+
+/*}*/
+/*.background {*/
+/*	max-width: 100%;*/
+/*	height: auto;*/
+/*	!*background-image: url("../css/images/img5.jpg");*!*/
+/*	background-size: cover;*/
+/*	background-repeat: no-repeat;*/
+
+/*}*/
 	#header {
 		position: relative;
-		background-image: url("../../images/header.jpg");
-		background-size: cover;
-		background-position: center center;
-		background-attachment: fixed;
+		/*max-width: 100%;*/
+		background-image: url("../css/images/img5.jpg");
+		background-size: cover ;
+		background-position: center;
+		/*background-attachment: fixed;*/
+		background-repeat: no-repeat;
+		/*background: rgba(0,0,0,0.5);*/
 		color: #fff;
 		text-align: center;
 		padding: 7.5em 0 2em 0;
 		cursor: default;
+		height: 100vh;
+		max-height: 1920px;
+
+		-webkit-background-size:cover;
+		-moz-background-size:cover;
+		-o-background-size:cover;
+
+
 	}
 
 		#header:before {
@@ -2246,10 +2317,10 @@ input, select, textarea {
 			margin: 1em 0 0 0;
 		}
 
-	body.homepage #header {
-		height: 100vh;
-		min-height: 40em;
-	}
+	/*body.homepage #header {*/
+	/*	height: 100vh;*/
+	/*	min-height: 40em;*/
+	/*}*/
 
 		body.homepage #header h1 {
 			font-size: 4em;
@@ -2713,6 +2784,12 @@ input, select, textarea {
 				display: block;
 				text-align: center;
 			}
+			#header {
+
+			}
+		    /*body.homepage #header {*/
+			/*	height: 100vh;*/
+			/*}*/
 
 		/* Footer */
 
@@ -2739,7 +2816,7 @@ input, select, textarea {
 		display: none;
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 768px) {
 
 		/* Basic */
 
@@ -3071,8 +3148,8 @@ input, select, textarea {
 				}
 
 			body.homepage #header {
-				min-height: 0;
-				padding: 5.5em 0 5em 0;
+				/*min-height: 0;*/
+				/*padding: 5.5em 0 5em 0;*/
 				height: auto;
 			}
 
